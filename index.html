@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Pertanyaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TEBAK PERTANYAAN,NU MENANG,DI BERE WDP ML✌️😂</h1>
+    <div class="question" id="question1">
+        <p>1. tempe terbuat dari?</p>
+        <input type="text" id="answer1">
+        <button onclick="checkAnswer(1, 'kadele buluk')">Cek Jawaban</button>
+        <p id="result1"></p>
+    </div>
+    <div class="question" id="question2">
+        <p>2. hewan berkaki 5 naon?</p>
+        <input type="text" id="answer2">
+        <button onclick="checkAnswer(2, 'eweh lah')">Cek Jawaban</button>
+        <p id="result2"></p>
+    </div>
+    <div class="question" id="question3">
+        <p>3. tahu bulat di goreng?</p>
+        <input type="text" id="answer3">
+        <button onclick="checkAnswer(3, 'na panci')">Cek Jawaban</button>
+        <p id="result3"></p>
+    </div>
+    <div class="question" id="question4">
+        <p>4. mie ayam geprek sabwrhaan di warung?</p>
+        <input type="text" id="answer4">
+        <button onclick="checkAnswer(4, '3000 meren')">Cek Jawaban</button>
+        <p id="result4"></p>
+    </div>
+    <div class="question" id="question5">
+        <p>5. cape?</p>
+        <input type="text" id="answer5">
+        <button onclick="checkAnswer(5, 'sarua ey')">Cek Jawaban</button>
+        <p id="result5"></p>
+    </div>
+
+    <script>
+        function checkAnswer(questionNumber, correctAnswer) {
+            var userAnswer = document.getElementById('answer' + questionNumber).value;
+            var resultElement = document.getElementById('result' + questionNumber);
+            if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+                resultElement.innerHTML = "Jawaban Anda Benar,ANJAY MENANG";
+            } else {
+                resultElement.innerHTML = "Jawaban Anda Salah. Coba lagi!,SEMANGATTT😂";
+            }
+        }
+    </script>
+</body>
+</html>
